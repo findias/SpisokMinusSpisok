@@ -13,8 +13,8 @@ first_list = read_spisok_first(a)
 a = 'second.txt'
 second_list = read_spisok_first(a)
 
-first_minus_sesond = list(set(first_list) - set(second_list)) # Из списка First вычитаем список Second
-second_minus_first = list(set(second_list) - set(first_list)) # Из списка  Second Вычитаем список First
+first_minus_sesond = sorted(list(set(first_list) - set(second_list))) # Из списка First вычитаем список Second. И сортируем по возрастанию
+second_minus_first = sorted(list(set(second_list) - set(first_list))) # Из списка  Second Вычитаем список First. И сортируем по возрастанию
 
 write_to_file('ResultFirstMinusSecond.txt', first_minus_sesond)
 write_to_file('ResultSecondMinusFirst.txt', second_minus_first)
